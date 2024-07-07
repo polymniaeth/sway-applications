@@ -22,7 +22,7 @@ export const useActiveWallet = () => {
   return {
     wallet,
     walletBalance: balance,
-    refetchBalnce: refetch,
+    refetchBalance: refetch,
     isPending:
       isWalletLoading ||
       isConnectedLoading,

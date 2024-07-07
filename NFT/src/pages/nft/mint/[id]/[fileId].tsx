@@ -67,7 +67,7 @@ export default function Mint() {
     if (nftData.length && nftData[0].metadata.keyvalues.minter) {
       setMinterAddress(nftData[0].metadata.keyvalues.minter);
     }
-  }, [nftData, nftData.length]);
+  }, [nftData]);
 
   const mint = useMint();
 

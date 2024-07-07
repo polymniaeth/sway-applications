@@ -1,5 +1,3 @@
-import { Grid, Stack } from "@mui/material";
-import { NFTCard } from "@/components/NFTCard";
 import { useGetNFTData } from "@/hooks/useGetNFTData";
 import { Text } from "@/components/Text";
 import { QueryClient, dehydrate } from "@tanstack/react-query";

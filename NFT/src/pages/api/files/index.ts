@@ -44,7 +44,7 @@ export default async function handler(
   try {
     if (req.method === "POST") {
       const form = formidable({ keepExtensions: true });
-      form.parse(req, async (err, fields, files) => {
+      form.parse(req, async (err, _fields, files) => {
         if (err || !files.file || files.file.length === 0) {
           console.error({ err });
           return res.status(500).send("Upload Error");
@@ -59,9 +59,11 @@ export default async function handler(
         // TODO: support pagination for an explore page
         const nftData = await pinata.pinList({ hashContains, status: "pinned" });
         res.json(nftData.rows);
+    } else {
+      res.status(405).send("Method Not Alllowed");
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send("Server Error");
+    res.status(500).send(`Server Error: ${error}`);
   }
 }

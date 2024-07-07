@@ -40,16 +40,12 @@ export const NFTCard = ({
           );
         }}
       >
-        <Box display="flex" justifyContent="center"><NFTImage src={`${GATEWAY_URL}/ipfs/${cid}/${fileCid}`} /></Box>
+        <Box display="flex" justifyContent="center">
+          <NFTImage src={`${GATEWAY_URL}/ipfs/${cid}/${fileCid}`} />
+        </Box>
         <CardContent sx={{ paddingBottom: "0px", paddingLeft: "0px" }}>
-          <Text className="text-2xl">
-            {nftName}
-          </Text>
-          {showDescription && (
-            <Text>
-              {nftDescription}
-            </Text>
-          )}
+          <Text className="text-2xl">{nftName}</Text>
+          {showDescription && <Text>{nftDescription}</Text>}
         </CardContent>
       </CardActionArea>
     </Card>

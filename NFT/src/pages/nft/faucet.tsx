@@ -4,10 +4,10 @@ import { TESTNET_FAUCET_LINK } from "@/lib";
 import { useEffect } from "react";
 
 export default function Faucet() {
-  const { wallet, refetchBalnce } = useActiveWallet();
+  const { wallet, refetchBalance } = useActiveWallet();
 
   useEffect(() => {
-    const interval = setInterval(refetchBalnce, 500);
+    const interval = setInterval(refetchBalance, 500);
     return () => clearInterval(interval);
   }, []);
 

@@ -18,7 +18,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     wallet,
     network,
     walletBalance,
-    refetchBalnce,
+    refetchBalance,
   } = useActiveWallet();
   const router = useRouter();
   const isMobile = useMedia("(max-width: 640px)", false);
@@ -44,7 +44,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     if (CURRENT_ENVIRONMENT === "testnet") {
       router.push(NFTRoutes.faucet);
     }
-    await refetchBalnce();
+    await refetchBalance();
   };
 
   const showTopUpButton = walletBalance?.lt(TOP_UP_AMOUNT);
