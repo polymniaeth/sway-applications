@@ -4,9 +4,9 @@
 /* eslint-disable */
 
 /*
-  Fuels version: 0.89.0
+  Fuels version: 0.90.0
   Forc version: 0.60.0
-  Fuel-Core version: 0.26.0
+  Fuel-Core version: 0.30.0
 */
 
 import type {
@@ -72,42 +72,6 @@ interface NFTContractAbiInterface extends Interface {
     unpause: FunctionFragment;
     constructor: FunctionFragment;
   };
-
-  encodeFunctionData(functionFragment: 'decimals', values: [AssetIdInput]): Uint8Array;
-  encodeFunctionData(functionFragment: 'name', values: [AssetIdInput]): Uint8Array;
-  encodeFunctionData(functionFragment: 'symbol', values: [AssetIdInput]): Uint8Array;
-  encodeFunctionData(functionFragment: 'total_assets', values: []): Uint8Array;
-  encodeFunctionData(functionFragment: 'total_supply', values: [AssetIdInput]): Uint8Array;
-  encodeFunctionData(functionFragment: 'burn', values: [string, BigNumberish]): Uint8Array;
-  encodeFunctionData(functionFragment: 'mint', values: [IdentityInput, string, BigNumberish]): Uint8Array;
-  encodeFunctionData(functionFragment: 'metadata', values: [AssetIdInput, StdString]): Uint8Array;
-  encodeFunctionData(functionFragment: 'owner', values: []): Uint8Array;
-  encodeFunctionData(functionFragment: 'set_decimals', values: [AssetIdInput, BigNumberish]): Uint8Array;
-  encodeFunctionData(functionFragment: 'set_name', values: [AssetIdInput, StdString]): Uint8Array;
-  encodeFunctionData(functionFragment: 'set_symbol', values: [AssetIdInput, StdString]): Uint8Array;
-  encodeFunctionData(functionFragment: 'set_metadata', values: [AssetIdInput, StdString, MetadataInput]): Uint8Array;
-  encodeFunctionData(functionFragment: 'is_paused', values: []): Uint8Array;
-  encodeFunctionData(functionFragment: 'pause', values: []): Uint8Array;
-  encodeFunctionData(functionFragment: 'unpause', values: []): Uint8Array;
-  encodeFunctionData(functionFragment: 'constructor', values: [IdentityInput]): Uint8Array;
-
-  decodeFunctionData(functionFragment: 'decimals', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'name', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'symbol', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'total_assets', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'total_supply', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'burn', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'mint', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'metadata', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'owner', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'set_decimals', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'set_name', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'set_symbol', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'set_metadata', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'is_paused', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'pause', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'unpause', data: BytesLike): DecodedValue;
-  decodeFunctionData(functionFragment: 'constructor', data: BytesLike): DecodedValue;
 }
 
 export class NFTContractAbi extends Contract {

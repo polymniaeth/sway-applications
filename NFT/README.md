@@ -14,17 +14,92 @@
     </a>
 </p>
 
-## Overview
+# Getting Started
+
+## Requirements
+
+To begin, install dependencies.
+
+- [Node.js v20.11.0 or latest stable](https://nodejs.org/en/). We recommend using [nvm](https://github.com/nvm-sh/nvm) to install.
+- [PNPM v8.15.7 or latest stable](https://pnpm.io/installation/)
+- [Rust v1.76.0 or latest `stable`](https://www.rust-lang.org/tools/install)
+- [Forc v0.61.2 with latest toolchain](https://install.fuel.network/latest)
+
+## Running Project Locally
+
+### 📚 1. Getting the Repository
+
+1. Visit the [Sway Application](https://github.com/FuelLabs/sway-applications) repo and fork the project.
+2. Then clone your forked copy to your local machine and get to work.
+
+```sh
+git clone https://github.com/FuelLabs/sway-applications
+cd sway-applications
+```
+
+### 📦 2. Install Dependencies
+
+```sh
+pnpm install
+```
+
+### 📒 3. Run Local Node
+
+This command will start a local Fuel node
+
+```sh
+cd NFT
+pnpm fuels:node
+```
+
+### 🛠️ 4. Build and Deploy contracts
+
+Now that you have the local node running you can build and deploy the contracts.  This command will build the contracts, generate their ts types for the frontend, deploy the contracts, and set the owner of the NFT contract.
+
+```sh
+pnpm fuels:run
+```
+
+### 🪅 5. Create Pinata Account and get API Key
+
+Create a `.env` file based on the provided example in the `NFT/` directory
+
+```sh
+cp ./.env.example ./.env
+```
+
+This app uses Pinata to store NFT image data.  You can follow their [documentation](https://docs.pinata.cloud/account-management/api-keys) to get an api key and gateway url.  Once you have an account set `PINATA_JWT` as the API key and `NEXT_PUBLIC_GATEWAY_URL` as your pinata gateway url in your `.env` file.
+
+###  💻 6. Run Web App
+
+Now that you have your contract and its types you can start your frontend.
+
+Start the frontend with the following command:
+
+```sh
+pnpm dev
+```
+
+After running that command, you can open [http://localhost:3000](http://localhost:3000) in your browser to view the explorer working.
+
+### 🧪 7. Run Contract tests
+
+```bash
+cd NFT-contract
+forc test 
+```
+
+# Overview
 
 A non-fungible token (NFT) is a unique asset that has a maximum supply of one. On the Fuel Network, all NFTs are [Native Assets](https://docs.fuel.network/docs/sway/blockchain-development/native_assets). They are commonly associated with artwork / collectibles however there are many greater utilities beyond that which have yet to be written for the Fuel Network.
 
-In this barebones NFT example project, there are a maximum of 100,000 NFTs that may be minted. Each NFT may contain any metadata the user desires to store. 
+Each NFT may contain any metadata the user desires to store, however this frontend app only stores: name, symbol, description, and image uri.
 
-## Standards Implementations
+# Standards Implementations
 
 The project implements and follows the [SRC-20; Native Asset](https://github.com/FuelLabs/sway-standards/blob/master/SRCs/src-20.md), [SRC-3; Mint and Burn](https://github.com/FuelLabs/sway-standards/blob/master/SRCs/src-3.md), and [SRC-7; Metadata](https://github.com/FuelLabs/sway-standards/blob/master/SRCs/src-7.md) standards. It also uses the [Native Asset Library](https://fuellabs.github.io/sway-libs/book/asset/index.html) to implement the basic functionality behind the standards.  
 
-### SRC-20
+## SRC-20
 
 The [SRC-20](https://github.com/FuelLabs/sway-standards/blob/master/SRCs/src-20.md) standard requires that there is a maximum number of one coin per NFT asset. It also states that the decimals must be `0u8` for any NFT. This project conforms to both these restrictions and thus can be deemed an NFT on the Fuel Network. 
 
@@ -47,7 +122,7 @@ abi SRC20 {
 }
 ```
 
-### SRC-3
+## SRC-3
 
 The [SRC-3](https://github.com/FuelLabs/sway-standards/blob/master/SRCs/src-3.md) standard defines the ABI for minting and burning. This has been properly implemented.
 
@@ -60,7 +135,7 @@ abi SRC3 {
 }
 ```
 
-### SRC-7
+## SRC-7
 
 The [SRC-7](https://github.com/FuelLabs/sway-standards/blob/master/SRCs/src-7.md) standard defines the ABI for retrieving metadata. This has been properly implemented. 
 
@@ -73,40 +148,4 @@ abi SRC7 {
 }
 ```
 
-## Project structure
 
-The project consists of a smart contract.
-
-<!--Only show most important files e.g. script to run, build etc.-->
-
-```sh
-NFT
-├── NFT-contract
-│   └──src/main.sw
-├── README.md
-└── SPECIFICATION.md
-```
-
-## Running the project
-
-### User interface
-
-TODO: The user interface does not currently exist.
-
-### Project
-
-In order to run the subsequent commands change into the following directory `/path/to/NFT/<here>`.
-
-#### Program compilation
-
-```bash
-forc build
-```
-
-#### Running the tests
-
-Before running the tests the programs must be compiled with the command above.
-
-```bash
-forc test 
-```
