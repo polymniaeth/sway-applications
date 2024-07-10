@@ -151,6 +151,8 @@ mod success {
             )
             .await;
 
+            dbg!("Here");
+
             let log = response
                 .decode_logs_with_type::<ExecuteTransactionEvent>()
                 .unwrap();

@@ -2,6 +2,7 @@ library;
 
 use std::{
     ecr::ec_recover_address,
+    bytes::Bytes,
     hash::{
         Hash,
         Hasher,
@@ -46,9 +47,9 @@ const EIP191_VERSION_BYTE = 0x45;
 /// * [b256] - The hash.
 pub fn compute_hash(type_to_hash: TypeToHash) -> b256 {
     match type_to_hash {
-        TypeToHash::Threshold(threshold) => sha256(threshold),
-        TypeToHash::Transaction(transaction) => sha256(transaction.into_bytes()),
-        TypeToHash::Weight(weight) => sha256(weight),
+        TypeToHash::Threshold(threshold) => sha256(Bytes::from(encode(threshold))),
+        TypeToHash::Transaction(transaction) => sha256(Bytes::from(encode(transaction))),
+        TypeToHash::Weight(weight) => sha256(Bytes::from(encode(weight))),
     }
 }
 

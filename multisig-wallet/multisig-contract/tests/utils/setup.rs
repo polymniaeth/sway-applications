@@ -232,7 +232,6 @@ pub(crate) fn call_parameters(
         ),
         forwarded_gas: DEFAULT_FORWARDED_GAS,
         function_selector: Bytes(encode_fn_selector("update_counter(Address, u64)")),
-        single_value_type_arg: false,
         transfer_params: TransferParams {
             asset_id: AssetId::zeroed(),
             value: None,

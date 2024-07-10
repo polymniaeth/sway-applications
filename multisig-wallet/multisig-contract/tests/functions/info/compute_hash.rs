@@ -107,7 +107,6 @@ mod success {
             calldata: Bytes([1u8; 32].to_vec()),
             forwarded_gas: 100,
             function_selector: Bytes([1u8; 32].to_vec()),
-            single_value_type_arg: false,
             transfer_params: TransferParams {
                 asset_id: AssetId::zeroed(),
                 value: Some(DEFAULT_TRANSFER_AMOUNT),
