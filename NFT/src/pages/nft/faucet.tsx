@@ -19,6 +19,7 @@ export default function Faucet() {
       width="100%"
       height="700px"
       allowFullScreen
+      referrerPolicy="origin"
     >
       hello
     </iframe>
