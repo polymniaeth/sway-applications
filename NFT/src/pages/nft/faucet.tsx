@@ -20,6 +20,7 @@ export default function Faucet() {
       height="700px"
       allowFullScreen
       referrerPolicy="origin"
+      allow="storage-access faucet-testnet.fuel.network"
     >
       hello
     </iframe>
