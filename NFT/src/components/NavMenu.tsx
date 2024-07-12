@@ -8,7 +8,7 @@ import { Link } from "./Link";
 import { NFTRoutes } from "@/routes";
 import { ConnectButton } from "./ConnectButton";
 
-export const NavMenu = () => {
+export const NavMenu = ({ address }: { address?: string; }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -51,7 +51,8 @@ export const NavMenu = () => {
           <Link href={NFTRoutes.collection}>My Account</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href={NFTRoutes.faucet}>Faucet</Link>
+          {/* <Link href={`https://faucet-testnet.fuel.network/?address=${address}`} target="_blank">Faucet</Link> */}
+          <Link href={NFTRoutes.faucet} target="_blank">Faucet</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ConnectButton />

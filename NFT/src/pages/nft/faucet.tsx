@@ -13,14 +13,14 @@ export default function Faucet() {
 
   if (!wallet) return <Text>Please connect wallet to faucet funds.</Text>;
 
+  console.log(`navigator.cookieEnabled`, navigator.cookieEnabled);
+
   return (
     <iframe
       src={`${TESTNET_FAUCET_LINK}?address=${wallet.address.toAddress()}`}
       width="100%"
       height="700px"
       allowFullScreen
-      referrerPolicy="origin"
-      allow="storage-access faucet-testnet.fuel.network"
     >
       hello
     </iframe>

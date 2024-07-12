@@ -99,7 +99,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <ConnectButton />
             </>
           ) : (
-            <NavMenu />
+            <NavMenu address={wallet?.address.toString()} />
           )}
         </nav>
 
