@@ -21,10 +21,13 @@ export default async function handler(
   try {
     if (req.method === "GET") {
       const filter = req.query.filter;
-      if (typeof filter !== "string" || typeof filter !== undefined) {
+      if (
+        (typeof filter !== "string" && typeof filter !== undefined) ||
+        Array.isArray(filter)
+      ) {
         throw new Error(`Invalid filter ${filter}`);
       }
-      const metadata = JSON.parse(filter);
+      const metadata = JSON.parse(filter || "");
       const nftData = await getNFTMetadata(metadata);
       res.json(nftData.rows);
     } else {

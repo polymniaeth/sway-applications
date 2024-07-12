@@ -45,7 +45,6 @@ export const useMint = () => {
         },
       });
       queryClient.invalidateQueries({ queryKey: [NFTQueryKeys.totalSupply] });
-      queryClient.invalidateQueries({ queryKey: [NFTQueryKeys.nftData] });
       toast.success("Successfully minted nft!");
     },
     onError: (err) => {
