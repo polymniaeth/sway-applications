@@ -51,9 +51,11 @@ export const NavMenu = ({ address }: { address?: string }) => {
         <MenuItem onClick={handleClose}>
           <Link href={NFTRoutes.collection}>My Account</Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <ExternalFaucet address={address}>Faucet</ExternalFaucet>
-        </MenuItem>
+        {address && (
+          <MenuItem onClick={handleClose}>
+            <ExternalFaucet address={address}>Faucet</ExternalFaucet>
+          </MenuItem>
+        )}
         <MenuItem onClick={handleClose}>
           <ConnectButton />
         </MenuItem>
