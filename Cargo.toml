@@ -41,6 +41,9 @@ members = [
     # timelock
     "./timelock/timelock-contract",
 ]
+exclude = [
+    ".devops/aurora",
+]
 
 [workspace.dependencies]
 fuels = { version= "0.62.0", features = ["fuel-core-lib"] }
