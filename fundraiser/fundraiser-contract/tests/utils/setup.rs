@@ -9,7 +9,7 @@ use fuels::{
 
 abigen!(Contract(
     name = "Fundraiser",
-    abi = "./fundraiser-contract/out/debug/fundraiser-contract-abi.json"
+    abi = "./fundraiser/fundraiser-contract/out/debug/fundraiser-contract-abi.json"
 ),);
 
 const FUNDRAISER_CONTRACT_BINARY_PATH: &str = "./out/debug/fundraiser-contract.bin";

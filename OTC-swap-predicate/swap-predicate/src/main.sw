@@ -37,7 +37,7 @@ fn main() -> bool {
     // The spending transaction must have an output that sends `ask_amount` of `ask_asset` to `receiver`
 
     // Check if the transaction contains a single input coin from the receiver, to cancel their own order (in addition to this predicate)
-    if input_count() == 2u8 {
+    if input_count() == 2u16 {
         match (input_coin_owner(0), input_coin_owner(1)) {
             (Some(owner1), Some(owner2)) => {
                 if owner1 == RECEIVER || owner2 == RECEIVER {

@@ -17,7 +17,7 @@ pub const LEAF: u8 = 0x00;
 
 abigen!(Contract(
     name = "AirdropDistributor",
-    abi = "./airdrop-contract/out/debug/airdrop-contract-abi.json"
+    abi = "./airdrop/airdrop-contract/out/debug/airdrop-contract-abi.json"
 ),);
 
 pub(crate) struct Metadata {

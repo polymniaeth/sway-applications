@@ -10,7 +10,7 @@ use sha2::{Digest, Sha256};
 
 abigen!(Contract(
     name = "NativeAsset",
-    abi = "./native-asset-contract/out/debug/native-asset-contract-abi.json"
+    abi = "./native-asset/native-asset-contract/out/debug/native-asset-contract-abi.json"
 ),);
 
 const NATIVE_ASSET_CONTRACT_BINARY_PATH: &str = "./out/debug/native-asset-contract.bin";

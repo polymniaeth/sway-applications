@@ -6,23 +6,23 @@ use fuels::{
 abigen!(
     Contract(
         name = "AMM",
-        abi = "./AMM-contract/out/debug/AMM-contract-abi.json"
+        abi = "./AMM/AMM-contract/out/debug/AMM-contract-abi.json"
     ),
     Contract(
         name = "Exchange",
-        abi = "./exchange-contract/out/debug/exchange-contract-abi.json"
+        abi = "./AMM/exchange-contract/out/debug/exchange-contract-abi.json"
     ),
     Script(
         name = "AtomicAddLiquidityScript",
-        abi = "./atomic-add-liquidity/out/debug/atomic-add-liquidity-abi.json"
+        abi = "./AMM/atomic-add-liquidity/out/debug/atomic-add-liquidity-abi.json"
     ),
     Script(
         name = "SwapExactInputScript",
-        abi = "./swap-exact-input/out/debug/swap-exact-input-abi.json"
+        abi = "./AMM/swap-exact-input/out/debug/swap-exact-input-abi.json"
     ),
     Script(
         name = "SwapExactOutputScript",
-        abi = "./swap-exact-output/out/debug/swap-exact-output-abi.json"
+        abi = "./AMM/swap-exact-output/out/debug/swap-exact-output-abi.json"
     )
 );
 

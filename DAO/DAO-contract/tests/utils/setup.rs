@@ -8,7 +8,7 @@ use fuels::{
 
 abigen!(Contract(
     name = "DaoVoting",
-    abi = "./DAO-contract/out/debug/DAO-contract-abi.json"
+    abi = "./DAO/DAO-contract/out/debug/DAO-contract-abi.json"
 ),);
 
 pub(crate) struct Metadata {

@@ -1,0 +1,45 @@
+[workspace]
+resolver = "2"
+members = [
+    # airdrop
+    "./airdrop/airdrop-contract",
+    # AMM
+    "./AMM/AMM-contract",
+    "./AMM/exchange-contract",
+    "./AMM/atomic-add-liquidity",
+    "./AMM/swap-exact-input",
+    "./AMM/swap-exact-output",
+    "./AMM/test-utils",
+    # counter-script
+    "./counter-script/interaction_script",
+    # DAO
+    "./DAO/DAO-contract",
+    # english-auction
+    "./english-auction/auction-contract",
+    # escrow
+    "./escrow/escrow-contract",
+    # fractional-NFT
+    "./fractional-NFT/f-NFT-contract",
+    # fundraiser
+    "./fundraiser/fundraiser-contract",
+    # name-registry
+    "./name-registry/registry-contract",
+    # native-asset
+    "./native-asset/native-asset-contract",
+    # NFT
+    "./NFT/NFT-contract",
+    # oracle
+    "./oracle/oracle-contract",
+    "./oracle/oracle-node",
+    "./oracle/utils",
+    # OTC-swap-predicate
+    "./OTC-swap-predicate/swap-predicate",
+    # TicTacToe
+    "./TicTacToe/tictactoe-contract",
+    # timelock
+    "./timelock/timelock-contract",
+]
+
+[workspace.dependencies]
+fuels = { version= "0.62.0", features = ["fuel-core-lib"] }
+tokio = { version = "1.12", features = ["rt", "macros"] }

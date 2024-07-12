@@ -67,7 +67,6 @@ sway-applications/
 #### Governance
 
 - [Decentralized Autonomous Organization (DAO)](./DAO) is an organization where users get to vote on governance proposals using governance assets.
-- [Multi-Signature Wallet](./multisig-wallet) is a wallet that requires multiple signatures to execute a transaction.
 
 #### Other
 
@@ -82,6 +81,10 @@ sway-applications/
 #### Low maintenance
 The below apps are updated to the latest version, but may have broken tests or broken functionality. Use at your own discretion.
 - [Automated Market Maker (AMM)](./AMM) is a decentralized exchange protocol that manages liquidity pools supplied by its users and determines prices algorithmically while exchanging assets.
+
+#### Archive
+The below apps are not updated to the latest version and are not currently maintained. Use at your own discretion.
+- [Multi-Signature Wallet](./multisig-wallet) is a wallet that requires multiple signatures to execute a transaction.
 
 ## Running a project
 

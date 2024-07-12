@@ -11,11 +11,11 @@ use fuels::{
 abigen!(
     Contract(
         name = "CounterContract",
-        abi = "./counter/out/debug/counter_contract-abi.json"
+        abi = "./counter-script/counter/out/debug/counter_contract-abi.json"
     ),
     Script(
         name = "InteractionScript",
-        abi = "./interaction_script/out/debug/interaction_script-abi.json"
+        abi = "./counter-script/interaction_script/out/debug/interaction_script-abi.json"
     )
 );
 
