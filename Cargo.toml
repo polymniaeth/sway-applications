@@ -1,6 +1,8 @@
 [workspace]
 resolver = "2"
 members = [
+    # .devops
+    "./.devops/.template/template-contract",
     # airdrop
     "./airdrop/airdrop-contract",
     # AMM

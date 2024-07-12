@@ -2,7 +2,7 @@ use fuels::prelude::*;
 
 abigen!(Contract(
     name = "Template",
-    abi = "./template-contract/out/debug/template-contract-abi.json"
+    abi = "./.devops/.template/template-contract/out/debug/template-contract-abi.json"
 ));
 
 const TEMPLATE_CONTRACT_BINARY_PATH: &str = "./out/debug/template-contract.bin";
