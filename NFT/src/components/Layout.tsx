@@ -8,16 +8,16 @@ import { useFaucet } from "@/hooks/useFaucet";
 import Head from "next/head";
 import { ConnectButton } from "./ConnectButton";
 import { useRouter } from "next/router";
-import { useMedia } from "react-use";
 import { NavMenu } from "./NavMenu";
 import { NFTRoutes } from "@/routes";
 import { ExternalFaucet } from "./ExternalFaucet";
+import { useBreakpoints } from "@/hooks/useBreakpoints";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const { faucetWallet } = useFaucet();
   const { wallet, network, walletBalance, refetchBalance } = useActiveWallet();
   const router = useRouter();
-  const isMobile = useMedia("(max-width: 640px)", false);
+  const { isTablet, isMobile } = useBreakpoints();
 
   const TOP_UP_AMOUNT = 100_000_000;
 
@@ -37,7 +37,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       toast.success("Wallet topped up!");
     }
 
-    if (CURRENT_ENVIRONMENT === "testnet") {
+    if (CURRENT_ENVIRONMENT === "testnet" && !isTablet) {
       router.push(NFTRoutes.faucet);
     }
     await refetchBalance();

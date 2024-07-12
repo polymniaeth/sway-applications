@@ -1,5 +1,5 @@
+import { useBreakpoints } from "@/hooks/useBreakpoints";
 import Link from "next/link";
-import { useMedia } from "react-use";
 
 export const ExternalFaucet = ({
   address,
@@ -8,7 +8,7 @@ export const ExternalFaucet = ({
   address?: string;
   children: React.ReactNode;
 }) => {
-  const isTablet = useMedia("(max-width: 768px)", false);
+  const { isTablet } = useBreakpoints();
 
   return (
     <>
@@ -20,7 +20,7 @@ export const ExternalFaucet = ({
           {children}
         </Link>
       ) : (
-        { children }
+        <>{children}</>
       )}
     </>
   );
