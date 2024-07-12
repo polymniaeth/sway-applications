@@ -48,7 +48,6 @@ jobs:
             "escrow",
             "fundraiser",
             "TicTacToe",
-            "multisig-wallet",
             "name-registry",
             "NFT",
             "native-asset",
