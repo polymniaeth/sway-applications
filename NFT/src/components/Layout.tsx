@@ -89,7 +89,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           {!isMobile ? (
             <>
               {showTopUpButton && (
-                <ExternalFaucet>
+                <ExternalFaucet address={wallet?.address.toString()}>
                   <Button onClick={() => topUpWallet()}>Faucet</Button>
                 </ExternalFaucet>
               )}

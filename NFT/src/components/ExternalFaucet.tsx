@@ -1,5 +1,5 @@
 import { useBreakpoints } from "@/hooks/useBreakpoints";
-import Link from "next/link";
+import { Link } from "./Link";
 
 export const ExternalFaucet = ({
   address,
