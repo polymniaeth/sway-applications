@@ -22,6 +22,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   } = useActiveWallet();
   const router = useRouter();
   const isMobile = useMedia("(max-width: 640px)", false);
+  const isTablet = useMedia("(max-width: 768px)", false);
 
   const TOP_UP_AMOUNT = 100_000_000;
 
@@ -42,7 +43,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     }
 
     if (CURRENT_ENVIRONMENT === "testnet") {
-      router.push(NFTRoutes.faucet);
+      if (isTablet) {
+        router.push(`https://faucet-testnet.fuel.network/?address=${wallet.address.toString()}}`)
+      } else {
+        router.push(NFTRoutes.faucet);
+      }
     }
     await refetchBalance();
   };
