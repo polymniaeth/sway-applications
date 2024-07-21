@@ -22,7 +22,7 @@ abigen!(Predicate(
 const BASE_ASSET: AssetId = AssetId::new([0u8; 32]);
 // Offered asset is the asset that will be locked behind the predicate
 const OFFERED_ASSET: AssetId = AssetId::new([2u8; 32]);
-const PREDICATE_BINARY: &str = "../swap-predicate/out/debug/swap-predicate.bin";
+const PREDICATE_BINARY: &str = "./swap-predicate/out/debug/swap-predicate.bin";
 
 // Get the balance of a given asset of an address
 async fn get_balance(provider: &Provider, address: &Bech32Address, asset: AssetId) -> u64 {

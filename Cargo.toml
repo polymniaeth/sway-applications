@@ -14,7 +14,7 @@ members = [
     "native-asset",
     "NFT",
     "oracle",
-    # "OTC-swap-predicate",
+    "OTC-swap-predicate",
     # "TicTacToe",
     # "timelock",
 ]
