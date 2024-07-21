@@ -4,10 +4,9 @@ use fuels::{
     crypto::SecretKey,
     prelude::{Bech32ContractId, ContractId, Provider},
 };
-use oracle_node::{spawn_oracle_updater_job, NetworkPriceProvider};
+use oracle_node::{spawn_oracle_updater_job, NetworkPriceProvider, Oracle};
 use reqwest::Url;
 use std::{env, str::FromStr, time::Duration};
-use utils::Oracle;
 
 #[tokio::main]
 async fn main() {

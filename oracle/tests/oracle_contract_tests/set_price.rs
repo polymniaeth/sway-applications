@@ -1,11 +1,11 @@
-use utils::{
+use crate::utils::{
     abi_calls::{price, set_price},
     test_helpers::setup,
 };
 
 mod success {
     use super::*;
-    use utils::PriceUpdateEvent;
+    use crate::utils::PriceUpdateEvent;
 
     #[tokio::test]
     async fn can_set_price() {

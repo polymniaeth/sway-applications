@@ -20,7 +20,7 @@ pub struct Metadata {
 
 pub mod paths {
     pub const ORACLE_CONTRACT_BINARY_PATH: &str =
-        "../oracle-contract/out/debug/oracle-contract.bin";
+        "./oracle-contract/out/debug/oracle-contract.bin";
 }
 
 pub mod abi_calls {

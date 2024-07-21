@@ -1,4 +1,4 @@
-use crate::functions::{HardcodedPriceProvider, LoggingPriceUpdater};
+use crate::oracle_node_tests::{HardcodedPriceProvider, LoggingPriceUpdater};
 use fuels::tx::Receipt;
 use itertools::Itertools;
 use oracle_node::spawn_oracle_updater_job;

@@ -1,4 +1,4 @@
-use utils::{
+use crate::utils::{
     abi_calls::{price, set_price},
     test_helpers::setup,
 };
