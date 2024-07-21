@@ -1,0 +1,15 @@
+[package]
+name = "AMM"
+version = "0.0.0"
+authors = ["Fuel Labs <contact@fuel.sh>"]
+edition = "2021"
+license = "Apache-2.0"
+
+[[test]]
+harness = true
+name = "AMM_tests"
+path = "tests/harness.rs"
+
+[dependencies]
+fuels = { workspace = true }
+tokio = { workspace = true }

@@ -1,5 +1,5 @@
 [package]
-name = "distributor-contract"
+name = "airdrop-contract"
 version = "0.0.0"
 authors = ["Fuel Labs <contact@fuel.sh>"]
 edition = "2021"

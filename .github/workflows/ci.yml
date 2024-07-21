@@ -84,7 +84,7 @@ jobs:
 
       - name: Check Rust formatting
         run: |
-          cargo fmt --verbose --check --package ${{ matrix.project }}
+          cargo fmt --verbose --check
 
       - name: Build Sway
         run: |
@@ -93,15 +93,15 @@ jobs:
 
       - name: Build Rust files
         run: |
-          cargo build --locked --package ${{ matrix.project }}
+          cargo build --locked --package "${{ matrix.project }}*"
 
       - name: Check Clippy Linter
         run: |
-          cargo clippy --all-features --all-targets -- -D warnings --package ${{ matrix.project }}
+          cargo clippy --all-features --all-targets -- -D warnings --package "${{ matrix.project }}*"
 
       - name: Run Rust tests
         run: |
-          cargo test --locked --package ${{ matrix.project }}
+          cargo test --locked
 
       - name: Run Sway tests
         run: |

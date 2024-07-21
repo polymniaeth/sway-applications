@@ -3,16 +3,7 @@
 version = 3
 
 [[package]]
-name = "AMM-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "test-utils",
- "tokio",
-]
-
-[[package]]
-name = "DAO-contract"
+name = "AMM"
 version = "0.0.0"
 dependencies = [
  "fuels",
@@ -27,15 +18,6 @@ checksum = "fe438c63458706e03479442743baae6c88256498e6431708f6dfc520a26515d3"
 dependencies = [
  "lazy_static",
  "regex",
-]
-
-[[package]]
-name = "NFT-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "sha2 0.10.8",
- "tokio",
 ]
 
 [[package]]
@@ -411,15 +393,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "atomic-add-liquidity"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "test-utils",
- "tokio",
-]
-
-[[package]]
 name = "atomic-polyfill"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -437,14 +410,6 @@ dependencies = [
  "http",
  "log",
  "url",
-]
-
-[[package]]
-name = "auction-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
 ]
 
 [[package]]
@@ -1310,22 +1275,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "distributor-contract"
-version = "0.0.0"
-dependencies = [
- "fuel-merkle 0.33.0",
- "fuels",
- "sha2 0.10.8",
- "tokio",
-]
-
-[[package]]
-name = "dotenv"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77c90badedccf4105eca100756a0b1289e191f6fcbdadd3cee1d2f614f97da8f"
-
-[[package]]
 name = "downcast"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1471,14 +1420,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "escrow-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
-]
-
-[[package]]
 name = "eth-keystore"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1543,24 +1484,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "exchange-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "test-utils",
- "tokio",
-]
-
-[[package]]
-name = "f-NFT-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "sha2 0.10.8",
- "tokio",
-]
-
-[[package]]
 name = "fastrand"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1605,21 +1528,6 @@ name = "fnv"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
-
-[[package]]
-name = "foreign-types"
-version = "0.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1"
-dependencies = [
- "foreign-types-shared",
-]
-
-[[package]]
-name = "foreign-types-shared"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b"
 
 [[package]]
 name = "form_urlencoded"
@@ -2015,38 +1923,18 @@ dependencies = [
 
 [[package]]
 name = "fuel-merkle"
-version = "0.33.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69243d1f4b60b3077cadca5474f5c019b1aa6d34e66e07b497b04ca2a3f15cf8"
-dependencies = [
- "digest 0.10.7",
- "fuel-storage 0.33.0",
- "hashbrown 0.13.2",
- "hex",
- "sha2 0.10.8",
- "thiserror",
-]
-
-[[package]]
-name = "fuel-merkle"
 version = "0.49.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5198b4eab5a19b0034971da88199dae7dd61806ebd8df366d6af1f17cda2e151"
 dependencies = [
  "derive_more",
  "digest 0.10.7",
- "fuel-storage 0.49.0",
+ "fuel-storage",
  "hashbrown 0.13.2",
  "hex",
  "serde",
  "sha2 0.10.8",
 ]
-
-[[package]]
-name = "fuel-storage"
-version = "0.33.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f0480dc192e3735de1a8bb0ddaff0bacf20af785529bc585b26e7ac1434e0ba"
 
 [[package]]
 name = "fuel-storage"
@@ -2065,7 +1953,7 @@ dependencies = [
  "derive_more",
  "fuel-asm",
  "fuel-crypto",
- "fuel-merkle 0.49.0",
+ "fuel-merkle",
  "fuel-types",
  "hashbrown 0.14.5",
  "itertools 0.10.5",
@@ -2104,8 +1992,8 @@ dependencies = [
  "ethnum",
  "fuel-asm",
  "fuel-crypto",
- "fuel-merkle 0.49.0",
- "fuel-storage 0.49.0",
+ "fuel-merkle",
+ "fuel-storage",
  "fuel-tx",
  "fuel-types",
  "hashbrown 0.14.5",
@@ -2262,14 +2150,6 @@ dependencies = [
  "tempfile",
  "tokio",
  "which",
-]
-
-[[package]]
-name = "fundraiser-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
 ]
 
 [[package]]
@@ -2808,19 +2688,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "hyper-tls"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d6183ddfa99b85da61a140bea0efc93fdf56ceaa041b37d553518030827f9905"
-dependencies = [
- "bytes",
- "hyper",
- "native-tls",
- "tokio",
- "tokio-native-tls",
-]
-
-[[package]]
 name = "iana-time-zone"
 version = "0.1.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3039,15 +2906,6 @@ name = "itertools"
 version = "0.10.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b0fd2260e829bddf4cb6ea802289de2f86d6a7a690192fbe91b3f46e0f2c8473"
-dependencies = [
- "either",
-]
-
-[[package]]
-name = "itertools"
-version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1c173a5686ce8bfa551b3563d0c2170bf24ca44da99c7ca4bfdab5418c3fe57"
 dependencies = [
  "either",
 ]
@@ -3819,32 +3677,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "native-asset-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "sha2 0.10.8",
- "tokio",
-]
-
-[[package]]
-name = "native-tls"
-version = "0.2.12"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8614eb2c83d59d1c8cc974dd3f920198647674a0a035e1af1fa58707e317466"
-dependencies = [
- "libc",
- "log",
- "openssl",
- "openssl-probe",
- "openssl-sys",
- "schannel",
- "security-framework",
- "security-framework-sys",
- "tempfile",
-]
-
-[[package]]
 name = "netlink-packet-core"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4045,73 +3877,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c08d65885ee38876c4f86fa503fb49d7b507c2b62552df7c70b2fce627e06381"
 
 [[package]]
-name = "openssl"
-version = "0.10.64"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "95a0481286a310808298130d22dd1fef0fa571e05a8f44ec801801e84b216b1f"
-dependencies = [
- "bitflags 2.6.0",
- "cfg-if",
- "foreign-types",
- "libc",
- "once_cell",
- "openssl-macros",
- "openssl-sys",
-]
-
-[[package]]
-name = "openssl-macros"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.70",
-]
-
-[[package]]
 name = "openssl-probe"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
-
-[[package]]
-name = "openssl-sys"
-version = "0.9.102"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c597637d56fbc83893a35eb0dd04b2b8e7a50c91e64e9493e398b5df4fb45fa2"
-dependencies = [
- "cc",
- "libc",
- "pkg-config",
- "vcpkg",
-]
-
-[[package]]
-name = "oracle-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
- "utils",
-]
-
-[[package]]
-name = "oracle-node"
-version = "0.0.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "dotenv",
- "fuels",
- "futures",
- "itertools 0.11.0",
- "reqwest",
- "serde",
- "tokio",
- "utils",
-]
 
 [[package]]
 name = "p256"
@@ -4247,12 +4016,6 @@ dependencies = [
  "der",
  "spki",
 ]
-
-[[package]]
-name = "pkg-config"
-version = "0.3.30"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d231b230927b5e4ad203db57bbcbee2802f6bce620b1e4a9024a07d94e2907ec"
 
 [[package]]
 name = "polling"
@@ -4662,14 +4425,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a66a03ae7c801facd77a29370b4faec201768915ac14a721ba36f20bc9c209b"
 
 [[package]]
-name = "registry-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
-]
-
-[[package]]
 name = "reqwest"
 version = "0.11.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4687,12 +4442,10 @@ dependencies = [
  "http-body",
  "hyper",
  "hyper-rustls 0.24.2",
- "hyper-tls",
  "ipnet",
  "js-sys",
  "log",
  "mime",
- "native-tls",
  "once_cell",
  "percent-encoding",
  "pin-project-lite",
@@ -4704,7 +4457,6 @@ dependencies = [
  "sync_wrapper",
  "system-configuration",
  "tokio",
- "tokio-native-tls",
  "tokio-rustls 0.24.1",
  "tower-service",
  "url",
@@ -5403,32 +5155,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
 
 [[package]]
-name = "swap-exact-input"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "test-utils",
- "tokio",
-]
-
-[[package]]
-name = "swap-exact-output"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "test-utils",
- "tokio",
-]
-
-[[package]]
-name = "swap-predicate"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
-]
-
-[[package]]
 name = "syn"
 version = "1.0.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5516,33 +5242,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "template-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
-]
-
-[[package]]
 name = "termtree"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3369f5ac52d5eb6ab48c6b4ffdc8efbcad6b89c765749064ba298f2c68a16a76"
-
-[[package]]
-name = "test-utils"
-version = "0.0.0"
-dependencies = [
- "fuels",
-]
-
-[[package]]
-name = "tests"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
-]
 
 [[package]]
 name = "thiserror"
@@ -5562,14 +5265,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.70",
-]
-
-[[package]]
-name = "tictactoe-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
 ]
 
 [[package]]
@@ -5601,14 +5296,6 @@ checksum = "3f252a68540fde3a3877aeea552b832b40ab9a69e318efd078774a01ddee1ccf"
 dependencies = [
  "num-conv",
  "time-core",
-]
-
-[[package]]
-name = "timelock-contract"
-version = "0.0.0"
-dependencies = [
- "fuels",
- "tokio",
 ]
 
 [[package]]
@@ -5664,16 +5351,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.70",
-]
-
-[[package]]
-name = "tokio-native-tls"
-version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bbae76ab933c85776efabc971569dd6119c580d8f5d448769dec1764bf796ef2"
-dependencies = [
- "native-tls",
- "tokio",
 ]
 
 [[package]]
@@ -5975,13 +5652,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
-name = "utils"
-version = "0.0.0"
-dependencies = [
- "fuels",
-]
-
-[[package]]
 name = "uuid"
 version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5999,12 +5669,6 @@ checksum = "81dfa00651efa65069b0b6b651f4aaa31ba9e3c3ce0137aaad053604ee7e0314"
 dependencies = [
  "getrandom",
 ]
-
-[[package]]
-name = "vcpkg"
-version = "0.2.15"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426"
 
 [[package]]
 name = "version_check"
