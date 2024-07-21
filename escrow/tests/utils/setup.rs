@@ -14,8 +14,8 @@ abigen!(Contract(
     abi = "./escrow/escrow-contract/out/debug/escrow-contract-abi.json"
 ),);
 
-const ESCROW_CONTRACT_BINARY_PATH: &str = "./out/debug/escrow-contract.bin";
-const ESCROW_CONTRACT_STORAGE_PATH: &str = "./out/debug/escrow-contract-storage_slots.json";
+const ESCROW_CONTRACT_BINARY_PATH: &str = "./escrow-contract/out/debug/escrow-contract.bin";
+const ESCROW_CONTRACT_STORAGE_PATH: &str = "./escrow-contract/out/debug/escrow-contract-storage_slots.json";
 
 pub(crate) struct Defaults {
     pub(crate) asset_amount: u64,

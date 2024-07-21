@@ -1446,6 +1446,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "escrow-contract"
+version = "0.0.0"
+dependencies = [
+ "fuels",
+ "tokio",
+]
+
+[[package]]
 name = "eth-keystore"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
