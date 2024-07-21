@@ -12,7 +12,7 @@ members = [
     "fundraiser",
     "name-registry",
     "native-asset",
-    # "NFT",
+    "NFT",
     # "oracle",
     # "OTC-swap-predicate",
     # "TicTacToe",

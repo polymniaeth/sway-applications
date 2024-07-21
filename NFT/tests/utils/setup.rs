@@ -13,7 +13,7 @@ abigen!(Contract(
     abi = "./NFT/NFT-contract/out/debug/NFT-contract-abi.json"
 ),);
 
-const NFT_CONTRACT_BINARY_PATH: &str = "./out/debug/NFT-contract.bin";
+const NFT_CONTRACT_BINARY_PATH: &str = "./NFT-contract/out/debug/NFT-contract.bin";
 
 pub(crate) fn defaults(
     contract_id: ContractId,
