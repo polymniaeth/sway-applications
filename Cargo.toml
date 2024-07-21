@@ -5,7 +5,7 @@ members = [
     "airdrop",
     "AMM",
     "counter-script",
-    # "DAO",
+    "DAO",
     # "english-auction",
     # "escrow",
     # "fractional-NFT",

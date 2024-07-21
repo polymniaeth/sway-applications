@@ -16,8 +16,8 @@ pub(crate) struct Metadata {
     pub(crate) wallet: WalletUnlocked,
 }
 
-const DAO_CONTRACT_BINARY_PATH: &str = "./out/debug/DAO-contract.bin";
-const DAO_CONTRACT_STORAGE_PATH: &str = "./out/debug/DAO-contract-storage_slots.json";
+const DAO_CONTRACT_BINARY_PATH: &str = "./DAO-contract/out/debug/DAO-contract.bin";
+const DAO_CONTRACT_STORAGE_PATH: &str = "./DAO-contract/out/debug/DAO-contract-storage_slots.json";
 
 pub(crate) fn proposal_transaction(asset_id: AssetId) -> Proposal {
     let call_data = CallData {
