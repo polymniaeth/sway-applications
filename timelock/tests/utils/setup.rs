@@ -13,8 +13,8 @@ abigen!(Contract(
     name = "Timelock",
     abi = "./timelock/timelock-contract/out/debug/timelock-contract-abi.json"
 ));
-const TIMELOCK_CONTRACT_BINARY_PATH: &str = "./out/debug/timelock-contract.bin";
-const TIMELOCK_CONTRACT_STORAGE_PATH: &str = "./out/debug/timelock-contract-storage_slots.json";
+const TIMELOCK_CONTRACT_BINARY_PATH: &str = "./timelock-contract/out/debug/timelock-contract.bin";
+const TIMELOCK_CONTRACT_STORAGE_PATH: &str = "./timelock-contract/out/debug/timelock-contract-storage_slots.json";
 
 pub async fn setup() -> (Timelock<WalletUnlocked>, WalletUnlocked, WalletUnlocked) {
     // Launch a local network and deploy the contract

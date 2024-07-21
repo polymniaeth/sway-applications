@@ -16,7 +16,7 @@ members = [
     "oracle",
     "OTC-swap-predicate",
     "TicTacToe",
-    # "timelock",
+    "timelock",
 ]
 exclude = [
     ".devops/aurora",
