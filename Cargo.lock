@@ -1518,6 +1518,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "f-NFT-contract"
+version = "0.0.0"
+dependencies = [
+ "fuels",
+ "sha2 0.10.8",
+ "tokio",
+]
+
+[[package]]
 name = "fastrand"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

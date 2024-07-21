@@ -8,7 +8,7 @@ members = [
     "DAO",
     "english-auction",
     "escrow",
-    # "fractional-NFT",
+    "fractional-NFT",
     # "fundraiser",
     # "name-registry",
     # "native-asset",

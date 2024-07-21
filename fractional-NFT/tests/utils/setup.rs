@@ -20,11 +20,11 @@ abigen!(
     ),
 );
 
-const F_NFT_CONTRACT_BINARY_PATH: &str = "./out/debug/f-NFT-contract.bin";
-const NFT_CONTRACT_BINARY_PATH: &str = "../test-artifacts/out/debug/NFT-contract.bin";
-const F_NFT_CONTRACT_STORAGE_PATH: &str = "./out/debug/f-NFT-contract-storage_slots.json";
+const F_NFT_CONTRACT_BINARY_PATH: &str = "./f-NFT-contract/out/debug/f-NFT-contract.bin";
+const NFT_CONTRACT_BINARY_PATH: &str = "./test-artifacts/out/debug/NFT-contract.bin";
+const F_NFT_CONTRACT_STORAGE_PATH: &str = "./f-NFT-contract/out/debug/f-NFT-contract-storage_slots.json";
 const NFT_CONTRACT_STORAGE_PATH: &str =
-    "../test-artifacts/out/debug/NFT-contract-storage_slots.json";
+    "./test-artifacts/out/debug/NFT-contract-storage_slots.json";
 
 pub(crate) struct User {
     pub(crate) f_nft: F_NFT<WalletUnlocked>,
