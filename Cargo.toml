@@ -6,7 +6,7 @@ members = [
     "AMM",
     "counter-script",
     "DAO",
-    # "english-auction",
+    "english-auction",
     # "escrow",
     # "fractional-NFT",
     # "fundraiser",

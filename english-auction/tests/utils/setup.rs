@@ -12,8 +12,8 @@ abigen!(Contract(
     abi = "./english-auction/auction-contract/out/debug/auction-contract-abi.json"
 ),);
 
-const AUCTION_CONTRACT_BINARY_PATH: &str = "./out/debug/auction-contract.bin";
-const AUCTION_CONTRACT_STORAGE_PATH: &str = "./out/debug/auction-contract-storage_slots.json";
+const AUCTION_CONTRACT_BINARY_PATH: &str = "./auction-contract/out/debug/auction-contract.bin";
+const AUCTION_CONTRACT_STORAGE_PATH: &str = "./auction-contract/out/debug/auction-contract-storage_slots.json";
 
 pub(crate) struct Metadata {
     pub(crate) auction: EnglishAuction<WalletUnlocked>,
