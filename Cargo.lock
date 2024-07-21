@@ -3748,6 +3748,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "native-asset-contract"
+version = "0.0.0"
+dependencies = [
+ "fuels",
+ "sha2 0.10.8",
+ "tokio",
+]
+
+[[package]]
 name = "netlink-packet-core"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"

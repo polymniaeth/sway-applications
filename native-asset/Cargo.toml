@@ -12,5 +12,5 @@ tokio = { workspace = true }
 
 [[test]]
 harness = true
-name = "integration_tests"
+name = "native_asset_integration_tests"
 path = "tests/harness.rs"

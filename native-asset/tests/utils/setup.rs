@@ -13,7 +13,7 @@ abigen!(Contract(
     abi = "./native-asset/native-asset-contract/out/debug/native-asset-contract-abi.json"
 ),);
 
-const NATIVE_ASSET_CONTRACT_BINARY_PATH: &str = "./out/debug/native-asset-contract.bin";
+const NATIVE_ASSET_CONTRACT_BINARY_PATH: &str = "./native-asset-contract/out/debug/native-asset-contract.bin";
 
 pub(crate) fn defaults(
     contract_id: ContractId,

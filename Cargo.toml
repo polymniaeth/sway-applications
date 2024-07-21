@@ -11,7 +11,7 @@ members = [
     "fractional-NFT",
     "fundraiser",
     "name-registry",
-    # "native-asset",
+    "native-asset",
     # "NFT",
     # "oracle",
     # "OTC-swap-predicate",
