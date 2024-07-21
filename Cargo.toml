@@ -9,7 +9,7 @@ members = [
     "english-auction",
     "escrow",
     "fractional-NFT",
-    # "fundraiser",
+    "fundraiser",
     # "name-registry",
     # "native-asset",
     # "NFT",

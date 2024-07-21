@@ -12,8 +12,8 @@ abigen!(Contract(
     abi = "./fundraiser/fundraiser-contract/out/debug/fundraiser-contract-abi.json"
 ),);
 
-const FUNDRAISER_CONTRACT_BINARY_PATH: &str = "./out/debug/fundraiser-contract.bin";
-const FUNDRAISER_CONTRACT_STORAGE_PATH: &str = "./out/debug/fundraiser-contract-storage_slots.json";
+const FUNDRAISER_CONTRACT_BINARY_PATH: &str = "./fundraiser-contract/out/debug/fundraiser-contract.bin";
+const FUNDRAISER_CONTRACT_STORAGE_PATH: &str = "./fundraiser-contract/out/debug/fundraiser-contract-storage_slots.json";
 
 pub(crate) struct Coin {
     pub(crate) id: AssetId,
