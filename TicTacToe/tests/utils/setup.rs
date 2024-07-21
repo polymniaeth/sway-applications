@@ -12,8 +12,8 @@ abigen!(Contract(
     abi = "./TicTacToe/tictactoe-contract/out/debug/tictactoe-contract-abi.json"
 ));
 
-const TICTACTOE_CONTRACT_BINARY_PATH: &str = "./out/debug/tictactoe-contract.bin";
-const TICTACTOE_CONTRACT_STORAGE_PATH: &str = "./out/debug/tictactoe-contract-storage_slots.json";
+const TICTACTOE_CONTRACT_BINARY_PATH: &str = "./tictactoe-contract/out/debug/tictactoe-contract.bin";
+const TICTACTOE_CONTRACT_STORAGE_PATH: &str = "./tictactoe-contract/out/debug/tictactoe-contract-storage_slots.json";
 
 pub(crate) struct Player {
     pub(crate) contract: TicTacToe<WalletUnlocked>,

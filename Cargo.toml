@@ -15,7 +15,7 @@ members = [
     "NFT",
     "oracle",
     "OTC-swap-predicate",
-    # "TicTacToe",
+    "TicTacToe",
     # "timelock",
 ]
 exclude = [
