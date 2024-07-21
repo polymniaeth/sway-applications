@@ -4,7 +4,7 @@ members = [
     # ".devops.template",
     "airdrop",
     "AMM",
-    # "counter-script",
+    "counter-script",
     # "DAO",
     # "english-auction",
     # "escrow",

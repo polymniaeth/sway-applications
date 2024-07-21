@@ -20,9 +20,9 @@ abigen!(
 );
 
 // File path constants
-const STORAGE_CONFIGURATION_PATH: &str = "../counter/out/debug/counter_contract-storage_slots.json";
-const CONTRACT_BIN_PATH: &str = "../counter/out/debug/counter_contract.bin";
-const SCRIPT_BIN_PATH: &str = "../interaction_script/out/debug/interaction_script.bin";
+const STORAGE_CONFIGURATION_PATH: &str = "./counter/out/debug/counter_contract-storage_slots.json";
+const CONTRACT_BIN_PATH: &str = "./counter/out/debug/counter_contract.bin";
+const SCRIPT_BIN_PATH: &str = "./interaction_script/out/debug/interaction_script.bin";
 
 // This function will setup the test environment for you. It will return a tuple containing the contract instance and the script instance.
 pub async fn setup() -> (
