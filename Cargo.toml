@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-    ".devops.template",
+    ".devops/.template",
     "airdrop",
     "AMM",
     "counter-script",
