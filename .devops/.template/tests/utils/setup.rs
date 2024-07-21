@@ -5,8 +5,8 @@ abigen!(Contract(
     abi = "./.devops/.template/template-contract/out/debug/template-contract-abi.json"
 ));
 
-const TEMPLATE_CONTRACT_BINARY_PATH: &str = "./out/debug/template-contract.bin";
-const TEMPLATE_CONTRACT_STORAGE_PATH: &str = "./out/debug/template-contract-storage_slots.json";
+const TEMPLATE_CONTRACT_BINARY_PATH: &str = "./template-contract/out/debug/template-contract.bin";
+const TEMPLATE_CONTRACT_STORAGE_PATH: &str = "./template-contract/out/debug/template-contract-storage_slots.json";
 
 pub async fn setup() -> (Template<WalletUnlocked>, WalletUnlocked) {
     let number_of_wallets = 1;
