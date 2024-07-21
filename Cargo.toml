@@ -10,7 +10,7 @@ members = [
     "escrow",
     "fractional-NFT",
     "fundraiser",
-    # "name-registry",
+    "name-registry",
     # "native-asset",
     # "NFT",
     # "oracle",

@@ -21,8 +21,8 @@ abigen!(Contract(
 pub(crate) const REGISTER_DURATION: u64 = 10000;
 pub(crate) const EXTEND_DURATION: u64 = 2500;
 
-const CONTRACT_BINARY_PATH: &str = "./out/debug/registry-contract.bin";
-const CONTRACT_STORAGE_PATH: &str = "./out/debug/registry-contract-storage_slots.json";
+const CONTRACT_BINARY_PATH: &str = "./registry-contract/out/debug/registry-contract.bin";
+const CONTRACT_STORAGE_PATH: &str = "./registry-contract/out/debug/registry-contract-storage_slots.json";
 
 pub(crate) struct Account {
     pub(crate) wallet: WalletUnlocked,
