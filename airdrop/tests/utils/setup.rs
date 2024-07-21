@@ -52,8 +52,8 @@ impl Node {
     }
 }
 
-const DISTRIBUTOR_CONTRACT_BINARY_PATH: &str = "./out/debug/airdrop-contract.bin";
-const DISTRIBUTOR_CONTRACT_STORAGE_PATH: &str = "./out/debug/airdrop-contract-storage_slots.json";
+const DISTRIBUTOR_CONTRACT_BINARY_PATH: &str = "./airdrop-contract/out/debug/airdrop-contract.bin";
+const DISTRIBUTOR_CONTRACT_STORAGE_PATH: &str = "./airdrop-contract/out/debug/airdrop-contract-storage_slots.json";
 
 pub(crate) async fn build_tree(
     key: u64,

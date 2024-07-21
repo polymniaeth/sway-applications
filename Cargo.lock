@@ -92,6 +92,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "airdrop-contract"
+version = "0.0.0"
+dependencies = [
+ "fuel-merkle 0.33.0",
+ "fuels",
+ "sha2 0.10.8",
+ "tokio",
+]
+
+[[package]]
 name = "allocator-api2"
 version = "0.2.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1923,18 +1933,38 @@ dependencies = [
 
 [[package]]
 name = "fuel-merkle"
+version = "0.33.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "69243d1f4b60b3077cadca5474f5c019b1aa6d34e66e07b497b04ca2a3f15cf8"
+dependencies = [
+ "digest 0.10.7",
+ "fuel-storage 0.33.0",
+ "hashbrown 0.13.2",
+ "hex",
+ "sha2 0.10.8",
+ "thiserror",
+]
+
+[[package]]
+name = "fuel-merkle"
 version = "0.49.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5198b4eab5a19b0034971da88199dae7dd61806ebd8df366d6af1f17cda2e151"
 dependencies = [
  "derive_more",
  "digest 0.10.7",
- "fuel-storage",
+ "fuel-storage 0.49.0",
  "hashbrown 0.13.2",
  "hex",
  "serde",
  "sha2 0.10.8",
 ]
+
+[[package]]
+name = "fuel-storage"
+version = "0.33.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9f0480dc192e3735de1a8bb0ddaff0bacf20af785529bc585b26e7ac1434e0ba"
 
 [[package]]
 name = "fuel-storage"
@@ -1953,7 +1983,7 @@ dependencies = [
  "derive_more",
  "fuel-asm",
  "fuel-crypto",
- "fuel-merkle",
+ "fuel-merkle 0.49.0",
  "fuel-types",
  "hashbrown 0.14.5",
  "itertools 0.10.5",
@@ -1992,8 +2022,8 @@ dependencies = [
  "ethnum",
  "fuel-asm",
  "fuel-crypto",
- "fuel-merkle",
- "fuel-storage",
+ "fuel-merkle 0.49.0",
+ "fuel-storage 0.49.0",
  "fuel-tx",
  "fuel-types",
  "hashbrown 0.14.5",

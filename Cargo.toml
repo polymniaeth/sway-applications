@@ -2,7 +2,7 @@
 resolver = "2"
 members = [
     # ".devops.template",
-    # "airdrop",
+    "airdrop",
     "AMM",
     # "counter-script",
     # "DAO",
