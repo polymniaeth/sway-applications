@@ -29,7 +29,7 @@ export default function Home() {
     <NFTGrid
       isLoading={isLoading}
       nftData={nftData}
-      title={<Text variant="h3">Latest NFTs</Text>}
+      title={<Text variant="h3"> Current Token Balance </Text>}
     />
   );
 }

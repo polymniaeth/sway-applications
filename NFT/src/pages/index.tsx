@@ -18,10 +18,10 @@ export default function Home() {
         </Box>
       </nav>
       <div className="min-h-screen items-center p-20 flex flex-col gap-6">
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           <Grid item>
-            <HomeCard href="/nft" title="NFT">
-              Create and mint NFTs.
+            <HomeCard href="/nft" title="SRC20 Token">
+            Mint SRC20m tokens and transfer to others on the Fuel network.
             </HomeCard>
           </Grid>
           <Grid item>
@@ -29,6 +29,7 @@ export default function Home() {
               Play the classic game of Tic Tac Toe on the Fuel network.
             </HomeCard>
           </Grid>
+          
         </Grid>
       </div>
     </Stack>

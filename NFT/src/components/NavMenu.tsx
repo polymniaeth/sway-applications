@@ -42,14 +42,12 @@ export const NavMenu = ({ address }: { address?: string }) => {
         MenuListProps={{ "aria-labelledby": "basic-button" }}
         slotProps={{ paper: { className: "bg-gray-800" } }}
       >
+        
         <MenuItem onClick={handleClose}>
-          <Link href={NFTRoutes.explore}>Explore</Link>
+          <Link href={NFTRoutes.create}>Mint</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href={NFTRoutes.create}>Create</Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link href={NFTRoutes.collection}>My Account</Link>
+          <Link href={NFTRoutes.collection}>Manage Tokens</Link>
         </MenuItem>
         {address && (
           <MenuItem onClick={handleClose}>

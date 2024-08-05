@@ -17,16 +17,19 @@ export default function Create() {
   const [file, setFile] = useState<File>();
   const [name, setName] = useState("");
   const [symbol, setSymbol] = useState("");
+  const [decimals, setDecimals] = useState("");
+  const [totalSupply, setTotalSupply] = useState("");
+
   const [description, setDescription] = useState("");
   const { isConnected, isPending } = useActiveWallet();
 
-  const isCreatingNFT = Boolean(useIsMutating({
-    mutationKey: [NFTQueryKeys.createNFT],
+  const isCreatingToken = Boolean(useIsMutating({
+    mutationKey: [NFTQueryKeys.createToken],
   }));
   const uploadFile = useUploadFile();
 
   const isCreateButtonDisabled =
-    !name || !symbol || uploadFile.isPending || isCreatingNFT;
+    !name || !symbol || isCreatingToken;
 
   return (
     <>
@@ -49,67 +52,35 @@ export default function Create() {
               )}
             >
               <Text variant="h4" sx={{ paddingBottom: "28px" }}>
-                Create New NFT
+                Create and Mint new token
               </Text>
-              <Text>Upload File</Text>
-              <Stack
-                alignItems="center"
-                justifyContent="space-around"
-                sx={{
-                  border: "1px dashed",
-                  borderColor: "#434343",
-                  borderRadius: "15px",
-                }}
-                className="px-8 pb-8 pt-6"
-              >
-                {file ? (
-                  <>
-                    <IconButton
-                      onClick={() => setFile(undefined)}
-                      sx={{
-                        color: "white",
-                        alignSelf: "end",
-                        padding: "0px",
-                        marginRight: "-30px",
-                        marginTop: "-10px",
-                      }}
-                    >
-                      <CloseIcon />
-                    </IconButton>
-                    <NFTImage src={URL.createObjectURL(file)} className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96" />
-                  </>
-                ) : (
-                  <Stack spacing={2}>
-                    <Text>
-                      Recommended size: 350 x 350. File types supported: JPG,
-                      PNG, or GIF.
-                    </Text>
-                    <UploadButton setFile={setFile} />
-                  </Stack>
-                )}
-              </Stack>
               <Text>Name</Text>
               <Input
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-                placeholder="Buff Dragons"
+                placeholder="Crypto Kitty"
               />
               <Text>Symbol</Text>
               <Input
                 value={symbol}
                 onChange={(event) => setSymbol(event.target.value)}
-                placeholder="BD"
+                placeholder="CK"
               />
-              <Text>Description (Optional)</Text>
-              <TextField
-                value={description}
-                onChange={(event) => setDescription(event.target.value)}
-                placeholder="Cool dragons that like to lift weights"
-                multiline
-                rows={4}
-                className={clsx([...inputStyle])}
-                inputProps={{ className: "placeholder:text-zinc-400 text-zinc-50" }}
-              />
+             
+              <Text>Decimals</Text>
+        <Input
+          type="number"
+          value={decimals}
+          onChange={(event) => setDecimals(event.target.value)}
+          placeholder="8"
+        />
+        <Text>Total Supply</Text>
+        <Input
+          type="number"
+          value={totalSupply}
+          onChange={(event) => setTotalSupply(event.target.value)}
+          placeholder="10000000"
+        />
               <Button
                 disabled={isCreateButtonDisabled}
                 onClick={() => {
@@ -124,16 +95,16 @@ export default function Create() {
                 }}
               >
                 {uploadFile.isPending
-                  ? "Uploading to IPFS..."
-                  : isCreatingNFT
-                    ? "Creating NFT..."
-                    : "Create NFT"}
+                  ? "Loading the Supply..."
+                  : isCreatingToken
+                    ? "Creating Token..."
+                    : "Mint Token "}
               </Button>
             </Stack>
           </div>
         </div>
       ) : (
-        <Text>Please connect your wallet to create an NFT.</Text>
+        <Text>Please connect your wallet to create and mint an SRC20 token</Text>
       )}
     </>
   );

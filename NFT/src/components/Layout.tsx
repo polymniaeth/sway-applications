@@ -46,6 +46,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   const showTopUpButton = walletBalance?.lt(TOP_UP_AMOUNT);
   const showAddNetworkButton = wallet && network && network?.url !== NODE_URL;
 
+  console.log(network?.url);
   const tryToAddNetwork = () => {
     toast(
       `Please add the network ${NODE_URL} to your Fuel wallet, or swtich to it if you have it already, and refresh the page.`
@@ -68,11 +69,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         >
           {!isMobile && (
             <>
-              <Link href={NFTRoutes.explore}>Explore</Link>
+             
 
-              <Link href={NFTRoutes.create}>Create</Link>
+              <Link href={NFTRoutes.create}>Mint</Link>
 
-              <Link href={NFTRoutes.collection}>My Account</Link>
+              <Link href={NFTRoutes.collection}>Manage Tokens</Link>
             </>
           )}
 
