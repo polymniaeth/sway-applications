@@ -26,7 +26,7 @@ export const useCreateNFT = () => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationKey: [NFTQueryKeys.createToken],
+    mutationKey: [NFTQueryKeys.createNFT],
     mutationFn: async ({ cid, name, symbol }: CreateNFT) => {
       if (!wallet)
         throw new Error(
