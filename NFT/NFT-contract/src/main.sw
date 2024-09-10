@@ -5,7 +5,21 @@ mod interface;
 
 use errors::{MintError, SetError};
 use interface::Constructor;
-use standards::{src20::{SetDecimalsEvent, SRC20}, src3::SRC3, src5::{SRC5, State}, src7::{Metadata, SRC7},};
+use standards::{
+    src20::{
+        SetDecimalsEvent,
+        SRC20,
+    },
+    src3::SRC3,
+    src5::{
+        SRC5,
+        State,
+    },
+    src7::{
+        Metadata,
+        SRC7,
+    },
+};
 use sway_libs::{
     asset::{
         base::{
