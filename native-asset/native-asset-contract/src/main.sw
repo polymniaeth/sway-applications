@@ -262,7 +262,8 @@ impl SRC3 for Contract {
             storage
                 .total_supply,
             recipient,
-            sub_id.unwrap(),
+            sub_id
+                .unwrap(),
             amount,
         );
     }

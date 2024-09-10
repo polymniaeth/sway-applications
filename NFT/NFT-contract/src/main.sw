@@ -304,7 +304,8 @@ impl SRC3 for Contract {
             storage
                 .total_supply,
             recipient,
-            sub_id,
+            sub_id
+                .unwrap(),
             amount,
         );
     }
@@ -704,6 +705,6 @@ impl EmitSRC20Events for Contract {
         // Metadata that is stored as a configurable should only be emitted once.
         let sender = msg_sender().unwrap();
 
-        SetDecimalsEvent::new(asset, DECIMALS, sender).log();
+        SetDecimalsEvent::new(asset, 0u8, sender).log();
     }
 }

@@ -3,7 +3,20 @@ contract;
 mod errors;
 
 use errors::{DepositError, SubIdError, WithdrawError};
-use standards::{src20::SRC20, src6::{Deposit, SRC6, Withdraw}};
+use standards::{
+    src20::{
+        SetDecimalsEvent,
+        SetNameEvent,
+        SetSymbolEvent,
+        SRC20,
+        TotalSupplyEvent,
+    },
+    src6::{
+        Deposit,
+        SRC6,
+        Withdraw,
+    },
+};
 use std::{
     asset::{
         burn,
@@ -475,7 +488,7 @@ impl SRC20 for Contract {
 }
 
 abi EmitSRC20Events {
-    fn emit_src20_events();
+    fn emit_src20_events(asset: AssetId);
 }
 
 impl EmitSRC20Events for Contract {
